@@ -47,12 +47,12 @@
 ##### The depth map would be generated in the output folder.
 
 
-##### Here is the link to [My Colab Notebook to generate Depth Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
+##### Here is the link to [My Colab Notebook to generate Depth Images](https://github.com/nmeva/S14/blob/main/My_Depth_NB.ipynb)
 ##### and [GDrive link for Depth Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 
 
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Task 2:
@@ -74,13 +74,30 @@
 
 <a href="https://github.com/nmeva/S14/blob/main/images/evaluate.py"> <img src="https://github.com/nmeva/S14/blob/main/images/eval.png" width="250"></a>
 
-##### Here is the link to the [My Colab Notebook to generate Planer Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
+
+##### 3. The camera parameters should be put under a *.txt* file with 6 values (fx, fy, cx, cy, image_width, image_height) separately by a space. fx fy are the focal lengths and cx cy are the image centers. Since we downloaded images from google, I have just retained the fx fy and cx=image_width/2, cy=image_height/2. The following code helps to add separate intrinsics file for each image, and name it the same with the image (changing the file extension to *.txt*)
+```
+import os
+os.chdir('/content/drive/My Drive/X/planercnn/images')
+from PIL import Image
+for file in os.listdir():
+    im = Image.open(file)
+    L=[587,587,im.size[0],im.size[1],round(im.size[0]/2),round(im.size[1]/2)]
+    filename=file.replace('.png', '.txt').replace('.jpg', '.txt')
+    with open(filename, 'w') as f:
+        print(*L,file=f)
+        
+```
+
+
+##### Here is the link to the [My Colab Notebook to generate Planer Images](https://github.com/nmeva/S14/blob/main/My_Depth_NB.ipynb)
 ##### and [GDrive link for Planer Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 
 
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Task 3:
