@@ -65,8 +65,10 @@
 ##### 2. The output was quite heavy with 9 files thrown for each input image which could easily consume all drive space. Also, the number of images getting processed were restricted to 100 and the output images did not have the input image names.
 ##### Thanks to Ajith who provided the below modified scripts to get just the required planer image and save the output with the input image name.
 ##### Also add the argument "--numTestingImages=4000" while running inference to overide the number of processed images.
-<a href="https://github.com/nmeva/S14/blob/main/images/visualize_utils.py"> <img src="https://github.com/nmeva/S14/blob/main/images/visualize.png" width="150"></a>
-<a href="https://github.com/nmeva/S14/blob/main/images/evaluate.py"> <img src="https://github.com/nmeva/S14/blob/main/images/eval.png" width="150"></a>
+<a href="https://github.com/nmeva/S14/blob/main/images/visualize_utils.py"> <img src="https://github.com/nmeva/S14/blob/main/images/visualize.png" width="250"></a>
+
+
+<a href="https://github.com/nmeva/S14/blob/main/images/evaluate.py"> <img src="https://github.com/nmeva/S14/blob/main/images/eval.png" width="250"></a>
 
 ##### Here is the link to the [Jupyter Notebook](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 ##### and [this](https://github.com/nmeva/S14/blob/main/images/Midas.png) is the link to the drive which containts planer images.
