@@ -60,8 +60,14 @@
 ##### Sorting this out on a local machine was time consuming exercise only to understand that Colab is a better option.
 
 ##### It took a lot of back and forth to get all dependencies to install until @voldy12 and @inocajith made it easy.
-[![planercnn_cuda.sh](https://github.com/nmeva/S14/blob/main/images/Planer_Colab.png)](https://github.com/nmeva/S14/blob/main/images/planercnn_cuda.sh])
-##### Ajith helped with a working notebook to run the code on Colab and xyz helped with a script that you could reuse everytime you spun a runtime on Colab.
+##### @inocajith helped with a notebook to run the code on Colab and @voldy12 helped with a script that you could reuse everytime you spun a runtime on Colab.
+<a href="https://github.com/nmeva/S14/blob/main/images/planercnn_cuda.sh"> <img src="https://github.com/nmeva/S14/blob/main/images/Planer_Colab.png" width="350"></a>
+
+
+
+                                                                                
+                                                                                
+                                                                                
 ##### The summary is to downgrade torch to 0.4.0 and install cuda 8 and gcc 5 and once done upgrade it to 0.4.1 and compile nms and roialign.
 ##### Also, since the GPUs mentioned were dated and Colab provides newer and faster ones, stick to arch=sm_60 worked for most instances.
 ##### The output was quite heavy with 9 files thrown for each input image which could easily consume all drive space.
