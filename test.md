@@ -18,7 +18,7 @@
 #### The above repos have been explored individually and in the EVA5 Telegram Group and concisely summarized.
 
 
-##### Here is the sneak peek
+##### Here is the sneak peek of the unzipped Dataset
 ![Alt text](https://github.com/nmeva/S14/blob/main/images/Images.png)
 
 
@@ -32,29 +32,30 @@
 ### Getting Depth Images:
 
 #####
-##### The repo is very neatly written and can be used in multiple formats, Pytorch, Docker etc. but I chose to use the plain Python version.
+##### The MiDaS repo is very neatly written and can be used in multiple formats, Pytorch, Docker etc. but I chose to use the plain Python version.
 ##### Refer to the below screenshot from the repo, these are the only steps that need to be done.
-<img src="https://github.com/nmeva/S14/blob/main/images/Midas.png"  width="450">
+<img src="https://github.com/nmeva/S14/blob/main/images/Midas.png"  width="550">
 
-##### Focus on using Colab, it is a good idea to mount google drive and keep all data including repos
-##### in the drive so it is persistent across sessions or vms.
+##### My Focus was on using Colab, it is a good idea to mount google drive and keep all data including repos in the drive so that it is persistent across sessions or vms.
 
 ##### Use !wget to download the weights file.
 
 ##### After exploring a lot, I found that gdown to be very helpful in copying google drive files to the colab vm.
-##### I tried a lot of upload download etc. for exploration but you can use gdown for a quick copy.
+##### I spent a lot of time with download/upload/zip but you can use gdown for a quick copy.
 
 ##### Use unzip command on colab itself to unzip the files to a folder, rename it to input and follow the steps.
 ##### The depth map would be generated in the output folder.
 
 
-##### Here is the link to the [My Colab Notebook to generate Depth Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
+##### Here is the link to [My Colab Notebook to generate Depth Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 ##### and [GDrive link for Depth Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 
 
 
 
-## <u>Task 2:</u>
+
+
+## Task 2:
 ### Getting Planer Images
 ##### Issues and Solution:
 ##### 1.The first issue was that the repo is almost 2 years old and the dependencies were cffi==1.11.5,numpy==1.15.4, opencv-python==3.4.4.19,scikit-image==0.14.1,torch==0.4.1,tqdm==4.28.1
@@ -78,6 +79,10 @@
 
 
 
-## <u>Task 3:</u>
+
+
+
+
+## Task 3:
 ### [GDrive link for Depth Images](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 ### [GDrive link for Planer Images](https://github.com/nmeva/S14/blob/main/images/Midas.png) 
