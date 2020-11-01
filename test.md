@@ -53,29 +53,20 @@
 
 ## <u>Task 2:</u>
 ### Getting Planer Images
-
-##### This was quite a task.  
-##### The first issue was that the repo is almost 2 years old and the dependencies were cffi==1.11.5,numpy==1.15.4,
-##### opencv-python==3.4.4.19,scikit-image==0.14.1,torch==0.4.1,tqdm==4.28.1
+##### Issues and Solution:
+##### 1.The first issue was that the repo is almost 2 years old and the dependencies were cffi==1.11.5,numpy==1.15.4, opencv-python==3.4.4.19,scikit-image==0.14.1,torch==0.4.1,tqdm==4.28.1
 ##### Sorting this out on a local machine was time consuming exercise only to understand that Colab is a better option.
+##### Following are the changes made.The summary is to downgrade torch to 0.4.0 and install cuda 8 and gcc 5 and once done upgrade it to 0.4.1 and compile nms and roialign.
+##### Also, since the GPUs mentioned were dated and Colab provides newer and faster ones, stick to arch=sm_60 worked for most instances
 
-##### It took a lot of back and forth to get all dependencies to install until @voldy12 and @inocajith made it easy.
+##### + It took a lot of back and forth to get all dependencies to install until @voldy12 and @inocajith made it easy.
 ##### @inocajith helped with a notebook to run the code on Colab and @voldy12 helped with a script that you could reuse everytime you spun a runtime on Colab.
-<a href="https://github.com/nmeva/S14/blob/main/images/planercnn_cuda.sh"> <img src="https://github.com/nmeva/S14/blob/main/images/Planer_Colab.png" width="350"></a>
-
-
-
-                                                                                
-                                                                                
-                                                                                
-##### The summary is to downgrade torch to 0.4.0 and install cuda 8 and gcc 5 and once done upgrade it to 0.4.1 and compile nms and roialign.
-##### Also, since the GPUs mentioned were dated and Colab provides newer and faster ones, stick to arch=sm_60 worked for most instances.
-##### The output was quite heavy with 9 files thrown for each input image which could easily consume all drive space.
-##### Thanks to Gunda[link], you can use these modified files, file1[link] and file2[link] and get just the required planer image.
-##### The script also helps store the output files with the input names.
-
-##### Also add the argument "--numTestingImages=4000" while running inference as the maximum number is set at 100
-
+<a href="https://github.com/nmeva/S14/blob/main/images/planercnn_cuda.sh"> <img src="https://github.com/nmeva/S14/blob/main/images/Planer_Colab.png" width="350"></a>                                                                                                                                                           
+##### 2. The output was quite heavy with 9 files thrown for each input image which could easily consume all drive space. Also, the number of images getting processed were restricted to 100 and the output images did not have the input image names.
+##### Thanks to Ajith who provided the below modified scripts to get just the required planer image and save the output with the input image name.
+##### Also add the argument "--numTestingImages=4000" while running inference to overide the number of processed images.
+<a href="https://github.com/nmeva/S14/blob/main/images/visualize_utils.py"> <img src="https://github.com/nmeva/S14/blob/main/images/visualize.png" width="150"></a>
+<a href="https://github.com/nmeva/S14/blob/main/images/evaluate.py"> <img src="https://github.com/nmeva/S14/blob/main/images/eval.png" width="150"></a>
 
 ##### Here is the link to the [Jupyter Notebook](https://github.com/nmeva/S14/blob/main/images/Midas.png)
 ##### and [this](https://github.com/nmeva/S14/blob/main/images/Midas.png) is the link to the drive which containts planer images.
